@@ -13,4 +13,13 @@ public class Deck {
 			card.display();
 		}
 	}
+	public Card deal_card() {
+		int i = 0;
+		Card dealt;
+		while(deck_cards.get(i) == null)
+			i++;
+		dealt = deck_cards.get(i);
+		deck_cards.remove(i);
+		return dealt;
+	}
 }
